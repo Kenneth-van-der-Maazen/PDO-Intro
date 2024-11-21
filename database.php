@@ -8,7 +8,7 @@ $dbname = 'winkel';
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     
-    echo "Connected succesfully!";
+    //echo "Connected succesfully!";
 
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
