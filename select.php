@@ -47,21 +47,24 @@ $result = $select->fetchAll();
         <input type="submit" name="submit">
     </form>
 
+    <h2>Overzicht producten</h2>
     <table>
         <tr>
             <th>Product Code</th>
             <th>Product Naam</th>
             <th>Prijs per Stuk</th>
             <th>Omschrijving</th>
+            <th>Action</th>
         </tr>
 
         <?php
             foreach ($result as $row) {
                 echo "<tr>";
-                echo "<td>" . $row['product_code'] . "</td>";
-                echo "<td>" . $row['product_naam'] . "</td>";
-                echo "<td>" . $row['prijs_per_stuk'] . "</td>";
-                echo "<td>" . $row['omschrijving'] . "</td>";
+                    echo "<td>" . $row['product_code'] . "</td>";
+                    echo "<td>" . $row['product_naam'] . "</td>";
+                    echo "<td>" . $row['prijs_per_stuk'] . "</td>";
+                    echo "<td>" . $row['omschrijving'] . "</td>";
+                    echo "<td> <a href='update.php?product_code=".$row['product_code']."'>Edit</a></td>";
                 echo "</tr>";
             }
         ?>
