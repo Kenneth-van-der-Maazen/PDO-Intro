@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
     if ($result > 0) {
         echo "Product is aangepast!";
-        header("Refresh: 3; Url=select.php");
+        header("Refresh: 3; url=select.php");
     } else {
         echo "Er ging iets mis!";
         die();
